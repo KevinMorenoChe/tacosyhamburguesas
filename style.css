@@ -1,0 +1,384 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* img{
+    width: 100px;
+} */
+
+/* estilos del titulo de la pagina web */
+
+.titulos{
+    background-color: #00a9d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+}
+
+.titulos__caja{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulos__titulo{
+    font-size: 32px;
+    color: #ffc400;
+    border: 3px solid #000;
+    width: 250px;
+    text-align: center;
+    text-shadow: 0px 3px 5px #000;
+    
+
+}
+
+.titulos__logo{
+    width: 70px;
+    float: left;
+}
+
+.titulos__lema{
+    width: 200px;
+    margin-left: 30px ;
+}
+
+/* estilos del carrito y compras */
+
+.floatnav{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.carrito__fondo{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #008caf7c;
+    border-top: 2px solid #000000;
+    box-shadow: 0px 0px 10px #000;
+    backdrop-filter: blur(4px);
+}
+
+.carrito{
+    display: none;
+
+}
+
+.carrito img{
+    width: 100px;
+}
+
+.carrito__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.carrito__titulo{
+    margin: 5px;
+    text-align: center;
+}
+
+.carrito__texto{
+    padding: 10px;
+    text-align: center;
+}
+
+.carrito__tabla{
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.carrito__buttons{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ff0000; */
+
+}
+
+.btn__vaciar{
+    margin: 10px;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    color: rgb(255, 217, 0);
+    text-shadow: 0px 3px 5px #000;
+    background-color: #00a9d3;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.btn__comprar{
+    margin: 10px;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    color: #c8ff00;
+    text-shadow: 0px 3px 5px #000;
+    background-color: #00a9d3;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    
+}
+
+.btn__ver{
+    margin: 10px;
+    font-size: 28px;
+    color: #ffc400;
+    text-shadow: 0px 3px 5px #000;
+    background-color: #00a9d3;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    width: 80%;
+    height: 50px;
+}
+
+/* codigo de apertura y cierre de la seccion de carrito */
+.open{
+    display: block;
+}
+
+.close{
+    display: none;
+}
+
+.small{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    font-size: 10px;
+    color: #ff0000;
+    background-color: #00a9d3;
+    border: 2px solid #000;
+    text-shadow: 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px #000;
+    width: 30px;
+    height: 30px;
+}
+
+.borrar{
+    background-color: #ffc400;
+    color: #e90202;
+    border-radius: 50px;
+    padding: 4px 7px 4px 7px;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------ */
+
+
+
+/* [[[[[[[[[[[[[[[[[[[paquetes]]]]]]]]]]]]]]]]]]] */
+
+.paquetes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.packs:hover{
+    transition: .4s;
+    background-color: #fff0ae;
+}
+
+.packs{
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    box-shadow: 0px 0px 7px #000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    width: 90%;
+    height: auto;
+}
+
+.packs__imagen{
+    width: 30%;
+    object-fit: cover;
+}
+
+.packs__precio{
+    margin: 5px;
+}
+
+/* [[[[[[[[[[[[[[comidas]]]]]]]]]]]]]] */
+
+.menu{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 50px 0px 50px 0px;
+}
+
+.menu__titulo{
+    text-align: center;
+}
+
+.menu__contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,5fr);
+}
+
+.comida{
+    border: 1px solid #000;
+    box-shadow: 0px 0px 4px #000;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comida:hover{
+    transition: .4s;
+    background-color: #fff0ae;
+}
+
+.comida__imagen{
+    width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.comida__titulo{
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.comida__texto{
+    font-size: 12px;
+    margin: 0px;
+}
+
+.comida__precio{
+    margin: 0px;
+}
+
+/* [[[[[[[[[[[[estilo del boton]]]]]]]]]]]] */
+
+.boton{
+    margin: 0px;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #e90202;
+    background-color: #ffffff00;
+}
+
+.boton:hover{
+    transition: .4s;
+    background-color: #ffd000;
+}
+
+.footer{
+    background-color: #23393d;
+    color: #fff;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 820px) {
+    .titulos{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main{
+        box-sizing: border-box;
+    }
+
+    .paquetes{
+        margin: 0px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .paquetes__box{
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .packs{
+        width: 240px;
+        flex-direction: column;
+    }
+
+    .packs__imagen{
+        width: 100%;
+    }
+
+    .menu__contenedor{
+        max-width: 800px;
+        grid-template-columns: repeat(3,3fr);
+    }
+
+    .comida{
+        height: 300px;
+    }
+
+    .comida__texto{
+        font-size: 16px;
+    }
+
+    .menu__box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* estilos del carrito y compras */
+
+ .floatnav{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.btn__vaciar{
+    width: 40%;
+}
+
+.btn__comprar{
+    width: 40%;
+
+} 
+
+
+}

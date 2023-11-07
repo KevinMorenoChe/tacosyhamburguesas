@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taquitos de la esquina</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/ico_taco.ico" type="image/x-icon">
+    </head>
+    <body>
+
+    <nav class="floatnav">
+
+        <button class="btn__ver open" id="btnver">Ver carrito</button>
+        
+        <div class="carrito close" id="carrito">
+            <div class="carrito__fondo"></div>
+
+            <div class="carrito__container">
+                
+                <h3 class="carrito__titulo">Tu carrito</h3>
+                <p class="carrito__texto">Paga o elimina los productos que desees seleccionar antes de confirmar tu compra</p>
+
+                <table id="tabla">
+
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+
+                </table>
+
+                <!-- creacion de dos botones un para pagar y otro para borrar carrito -->
+                <div class="carrito__buttons">
+                    <button class="btn__vaciar" id="btnvaciar">Vaciar Carrito</button>
+
+                    <button class="btn__comprar" id="btncomprar">Pagar</button>
+                </div>
+                
+            </div>
+    
+    
+        </div>
+    
+    </nav>
+
+    <header class="titulos">
+        <div class="titulos__caja">
+            <h1 class="titulos__titulo">Taquitos de la esquina</h1>
+        </div>
+        
+        <div class="titulos__caja">
+            <img src="img/logo_taco.png" alt="" class="titulos__logo">
+            <p class="titulos__lema">La mejor comida de tacos y hamburguesa</p>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="paquetes">
+            <!-- seccion de los paquetes -->
+            <div class="paquetes__box">
+
+                <h2 class="paquetes__titulo">Paquetes</h2>
+                
+            </div>
+            
+            <div class="paquetes__box" id="listapacks">
+
+                <div class="packs">
+    
+                    <img class="packs__imagen imagen" src="img/pack_num1.png" alt="pack 1">
+                    <h4 class="packs__titulo titulo">paquete num #1</h4>
+                    <p class="packs__precio precio">$70.00</p>
+                    <button class="packs__boton btnagregar boton" data-id="100001">agregar al carrito</button>
+    
+                </div>
+                
+    
+                <div class="packs">
+    
+                    <img class="packs__imagen imagen" src="img/pack_num2.png" alt="pack 2">
+                    <h4 class="packs__titulo titulo">paquete num #2</h4>
+                    <p class="packs__precio precio">$140.00</p>
+                    <button class="packs__boton btnagregar boton" data-id="100002">agregar al carrito</button>
+    
+                </div>
+                
+    
+                <div class="packs">
+    
+                    <img class="packs__imagen imagen" src="img/pack_num3.png" alt="pack 3">
+                    <h4 class="packs__titulo titulo">paquete num #3</h4>
+                    <p class="packs__precio precio">$65.00</p>
+                    <button class="packs__boton btnagregar boton" data-id="100003">agregar al carrito</button>
+    
+                </div>
+
+            </div>
+            
+        </section>
+
+        <section class="menu">
+
+            <div class="menu__box">
+
+                <h2 class="menu__titulo">Comidas</h2>
+                
+            </div>
+
+            <div class="menu__box">
+                
+                <div class="menu__contenedor" id="listacomidas">
+                    <!-- comidas individuales -->
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_taco.png" alt="taco">
+                        <h4 class="comida__titulo titulo">taco de mazisa</h4>
+                        <p class="comida__texto">carne asada, cilantro, cebolla</p>
+                        <p class="comida__precio precio">$15.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="001">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_taco_piña.png" alt="taco">
+                        <h4 class="comida__titulo titulo">taco de piña</h4>
+                        <p class="comida__texto">carne asada, piña, cebolla morada</p>
+                        <p class="comida__precio precio">$15.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="002">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_taco_pastor.png" alt="taco">
+                        <h4 class="comida__titulo titulo">taco de pastor</h4>
+                        <p class="comida__texto">carne de pastor, cilantro, cebolla</p>
+                        <p class="comida__precio precio">$15.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="003">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_hamburgesa.png" alt="hamburguesa">
+                        <h4 class="comida__titulo titulo">hamburguesa sencilla</h4>
+                        <p class="comida__texto">carne de hamburguesa, lechuga, cebolla, tomate</p>
+                        <p class="comida__precio precio">$40.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="004">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_hamburgesa_albondiga.png" alt="hamburguesa">
+                        <h4 class="comida__titulo titulo">hamburguesa barbecue</h4>
+                        <p class="comida__texto">albondigas, carne de hamburguesa y salsa barbecue</p>
+                        <p class="comida__precio precio">$60.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="005">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_hamburgesa_doble.png" alt="hamburguesa">
+                        <h4 class="comida__titulo titulo">hamburguesa doble</h4>
+                        <p class="comida__texto">carne de hamburguesa, lechuga, cebolla, tomate, todo al doble</p>
+                        <p class="comida__precio precio">$70.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="006">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_refresco.png" alt="refresco">
+                        <h4 class="comida__titulo titulo">cola</h4>
+                        <p class="comida__texto">bien fria para matar el picante</p>
+                        <p class="comida__precio precio">$25.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="007">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_agua.png" alt="agua">
+                        <h4 class="comida__titulo titulo">agua fresca</h4>
+                        <p class="comida__texto">agua fria 100% natural</p>
+                        <p class="comida__precio precio">$19.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="008">agregar al carrito</button>
+        
+                    </div>
+    
+                    <div class="comida">
+    
+                        <img class="comida__imagen imagen" src="img/producto_agua_de_sabor.png" alt="agua de sabor">
+                        <h4 class="comida__titulo titulo">agua de sabor</h4>
+                        <p class="comida__texto">agua misteriosa de sabor</p>
+                        <p class="comida__precio precio">$23.00</p>
+                        <button class="comida__boton btnagregar boton" data-id="009">agregar al carrito</button>
+        
+                    </div>
+    
+    
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="atrib">
+
+            <p>pagina creada por:</p>
+            <h3 class="atrib__nombre">Kevin Enrique Moreno Che</h3>
+            <p>Todos los derechos reservados</p>
+
+        </div>
+
+    </footer>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
