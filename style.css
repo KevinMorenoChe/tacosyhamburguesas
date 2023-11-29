@@ -3,6 +3,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #ededed;
 }
 
 /* img{
@@ -12,13 +13,15 @@ body{
 /* estilos del titulo de la pagina web */
 
 .titulos{
+    background-image: url(img/fondo_num1.png);
+    background-size: 300px 300px;
     background-color: #00a9d3;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 200px;
+    height: 400px;
 }
 
 .titulos__caja{
@@ -28,22 +31,33 @@ body{
 }
 
 .titulos__titulo{
+    background-color: #00000031;
     font-size: 32px;
     color: #ffc400;
     border: 3px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    backdrop-filter: blur(4px);
+    border-radius:10px;
+    padding: 20px;
     width: 250px;
     text-align: center;
     text-shadow: 0px 3px 5px #000;
-    
-
 }
 
 .titulos__logo{
-    width: 70px;
+    border: 3px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    border-radius:10px;
+    width: 120px;
     float: left;
 }
 
 .titulos__lema{
+    color: #fff;
+    text-shadow:
+        1px 1px 10px #000,
+        1px 1px 10px #000;
+    font-size: 24px;
     width: 200px;
     margin-left: 30px ;
 }
@@ -58,7 +72,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    z-index: 10;
 }
 
 .carrito__fondo{
@@ -66,7 +80,7 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #008caf7c;
+    background-color: rgba(1, 58, 79, 0.73);
     border-top: 2px solid #000000;
     box-shadow: 0px 0px 10px #000;
     backdrop-filter: blur(4px);
@@ -103,6 +117,29 @@ body{
     border: 1px solid #000;
 }
 
+.tabla{
+    width: 100%;
+    max-height: 75vh;
+    display: block;
+    overflow: auto;
+}
+
+
+.tabla th{
+    width: 200px;
+}
+
+.tabla tr{
+
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.tabla td{
+    text-align: center;
+
+}
+
 .carrito__buttons{
     position: absolute;
     bottom: 0px;
@@ -119,10 +156,10 @@ body{
     width: 50%;
     height: 50px;
     font-size: 20px;
-    color: rgb(255, 217, 0);
-    text-shadow: 0px 3px 5px #000;
-    background-color: #00a9d3;
+    color: rgb(255, 0, 0);
+    background-color: #ffd129;
     border: 2px solid #000;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px #000;
 }
 
@@ -131,10 +168,10 @@ body{
     width: 50%;
     height: 50px;
     font-size: 20px;
-    color: #c8ff00;
-    text-shadow: 0px 3px 5px #000;
-    background-color: #00a9d3;
+    color: #028900;
+    background-color: #ffd129;
     border: 2px solid #000;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px #000;
     
 }
@@ -142,10 +179,11 @@ body{
 .btn__ver{
     margin: 10px;
     font-size: 28px;
-    color: #ffc400;
+    color: #ffffff;
     text-shadow: 0px 3px 5px #000;
-    background-color: #00a9d3;
+    background-color: #ffd129;
     border: 2px solid #000;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px #000;
     width: 80%;
     height: 50px;
@@ -165,22 +203,25 @@ body{
     right: 0;
     top: 0;
     margin: 5px;
-    font-size: 10px;
+    font-size: 14px;
     color: #ff0000;
-    background-color: #00a9d3;
+    background-color: #ffd129;
     border: 2px solid #000;
+    border-radius: 50px;
     text-shadow: 0px 0px 0px #000;
     box-shadow: 0px 0px 0px #000;
     width: 30px;
     height: 30px;
+    font-weight: bold;
 }
 
 .borrar{
     background-color: #ffc400;
     color: #e90202;
     border-radius: 50px;
-    padding: 4px 7px 4px 7px;
+    padding: 3px 8px 5px 8px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* ------------------------------------------------------ */
@@ -204,6 +245,7 @@ body{
 
 .packs{
     display: flex;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid #000;
     box-shadow: 0px 0px 7px #000;
@@ -212,15 +254,15 @@ body{
     margin: 10px;
     width: 90%;
     height: auto;
+    background-color: #ffffff;
 }
 
 .packs__imagen{
     width: 30%;
     object-fit: cover;
 }
-
-.packs__precio{
-    margin: 5px;
+.packs__titulo{
+    text-align: center;
 }
 
 /* [[[[[[[[[[[[[[comidas]]]]]]]]]]]]]] */
@@ -246,11 +288,12 @@ body{
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
-    height: 270px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: #ffffff;
 }
 
 .comida:hover{
@@ -265,13 +308,16 @@ body{
 }
 
 .comida__titulo{
+    text-align: center;
     margin: 0px;
+    padding: 5px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .comida__texto{
-    font-size: 12px;
+    text-align: center;
+    font-size: 14px;
     margin: 0px;
 }
 
@@ -289,17 +335,21 @@ body{
     font-size: 14px;
     text-transform: capitalize;
     font-weight: bold;
-    color: #e90202;
+    color: #c70000;
     background-color: #ffffff00;
 }
 
 .boton:hover{
     transition: .4s;
-    background-color: #ffd000;
+    color: #ff0000;
+}
+.boton:active{
+    color: #fff;
+    background-color: rgb(208, 7, 0)
 }
 
 .footer{
-    background-color: #23393d;
+    background-color: rgb(1, 58, 79);
     color: #fff;
     width: 100%;
     height: 200px;
@@ -311,6 +361,7 @@ body{
     .titulos{
         flex-direction: row;
         justify-content: space-around;
+        height: 200px;
     }
 
     .main{

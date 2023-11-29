@@ -67,7 +67,7 @@ function productoAgregar(producto){
     const fila = document.createElement('tr');
     fila.innerHTML =`
     <td>
-        <img src="${producto.imagen}"  style="height:40px; object-fit:contain;">
+        <img src="${producto.imagen}"  style="height:80px; object-fit:contain;">
     </td>
     <td>
         ${producto.titulo}
